@@ -1,6 +1,5 @@
-# fastapi-celery-results
+fastapi-celery-results
 
-
-<!-- uvicorn main:app --reload -->
-<!-- celery -A celery worker -l info -->
-<!-- celery -A celery beat -l info -->
+uvicorn src.main:app --reload
+celery -A src.celery_app worker -l info
+celery -A src.celery_app beat -l info
